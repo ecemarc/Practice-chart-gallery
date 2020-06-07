@@ -69,9 +69,8 @@ plt.title("My_Line_Chart")
 plt.show()
 
 
-#
 # CHART 3 (HORIZONTAL BAR)
-#
+
 
 bar_data = [
     {"genre": "Thriller", "viewers": 123456},
