@@ -4,6 +4,7 @@
 # CHART 1 (PIE)
 #
 
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -29,6 +30,7 @@ print(pie_data)  # TODO: create a pie chart based on the pie_data)
 plt.pie(market_share_one, labels=company_name,
 
         autopct='% 1.1f %%', shadow=True, startangle=90)
+plt.title("Market_Share_Data")
 plt.show()
 
 
@@ -57,7 +59,7 @@ for l in line_data:
     date_time.append(l["date"])
     stock_price.append(l["stock_price_usd"])
 
-plt.plot(stock_price, date_time)
+plt.plot(date_time, stock_price)
 
 
 plt.xlabel("date_time")
@@ -91,6 +93,40 @@ bar_data = [
     {"genre": "Romantic Comedy", "viewers": 121212}
 ]
 
+
+genre_name = []
+viewers = []
 print("----------------")
 print("GENERATING BAR CHART...")
 print(bar_data)  # TODO: create a horizontal bar chart based on the bar_data
+
+for m in bar_data:
+    genre_name.append(m["genre"])
+    viewers.append(m["viewers"])
+
+
+# y_pos = np.arange(genre_name)
+# x_pos = np.arange(viewers)
+plt.barh(genre_name, viewers)
+
+plt.xlabel("number_of_viewers")
+plt.ylabel("genre")
+plt.title("Box_Office")
+
+# # libraries
+
+# # Make fake dataset
+# height = [3, 12, 5, 18, 45]
+# bars = ('A', 'B', 'C', 'D', 'E')
+# y_pos = np.arange(len(bars))
+
+# # Create horizontal bars
+# plt.barh(y_pos, height)
+
+# # Create names on the y-axis
+# plt.yticks(y_pos, bars)
+
+# # Show graphic
+# plt.show()
+
+plt.show()
