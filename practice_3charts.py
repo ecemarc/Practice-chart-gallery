@@ -67,16 +67,6 @@ plt.ylabel("stock_price")
 plt.title("My_Line_Chart")
 
 plt.show()
-# date_time = pd.to_datetime(date_time)
-
-# DF = pd.DataFrame()
-# DF["stock_price"] = stock_price
-# DF = DF.set_index(date_time)
-
-# fig, ax = plt.subplots()
-# fig.subplots_adjust(bottom=0.3)
-# plt.xticks(rotation=90)
-# plt.plot(DF)
 
 
 #
@@ -107,26 +97,12 @@ for m in bar_data:
 
 # y_pos = np.arange(genre_name)
 # x_pos = np.arange(viewers)
+
 plt.barh(genre_name, viewers)
 
 plt.xlabel("number_of_viewers")
 plt.ylabel("genre")
 plt.title("Box_Office")
 
-# # libraries
-
-# # Make fake dataset
-# height = [3, 12, 5, 18, 45]
-# bars = ('A', 'B', 'C', 'D', 'E')
-# y_pos = np.arange(len(bars))
-
-# # Create horizontal bars
-# plt.barh(y_pos, height)
-
-# # Create names on the y-axis
-# plt.yticks(y_pos, bars)
-
-# # Show graphic
-# plt.show()
 
 plt.show()
